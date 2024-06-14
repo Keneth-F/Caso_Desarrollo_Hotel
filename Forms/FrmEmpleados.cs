@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Caso_Desarrollo_Hotel.Clases;
+using MaterialSkin;
+using MaterialSkin.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,15 +10,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MaterialSkin.Controls;
-using MaterialSkin;
-using Caso_Desarrollo_Hotel.Clases;
 
 namespace Caso_Desarrollo_Hotel.Forms
 {
-    public partial class FrmClientes : MaterialForm
+    public partial class FrmEmpleados : MaterialForm
     {
-        public FrmClientes()
+        public FrmEmpleados()
         {
             InitializeComponent();
             var materialSkinManager = MaterialSkinManager.Instance;
@@ -25,14 +25,6 @@ namespace Caso_Desarrollo_Hotel.Forms
                 Primary.Green400, Primary.Green200,
                  Primary.Green500, Accent.Green700, TextShade.WHITE
                 );
-        }
-
-        private void BtnReturn_Click(object sender, EventArgs e)
-        {
-            var frm = new Main();
-            Hide();
-            frm.ShowDialog();
-            Close();
         }
 
         private void BtnAdd_Click(object sender, EventArgs e)
@@ -47,6 +39,10 @@ namespace Caso_Desarrollo_Hotel.Forms
                 {
                     throw new Exception("Apellidos no puede estar vacio");
                 }
+                if (string.IsNullOrEmpty(TxtPos.Text))
+                {
+                    throw new Exception("Posicion no puede estar vacio");
+                }
                 if (string.IsNullOrEmpty(TxtEmail.Text))
                 {
                     throw new Exception("Email no puede estar vacio");
@@ -55,27 +51,22 @@ namespace Caso_Desarrollo_Hotel.Forms
                 {
                     throw new Exception("Telefono no puede estar vacio");
                 }
-                if (string.IsNullOrEmpty(TxtDir.Text))
-                {
-                    throw new Exception("Direccion no puede estar vacio");
-                }
-                var cliente = new Cliente();
-                cliente.Nombre = TxtNombre.Text;
-                cliente.Email = TxtEmail.Text;
-                cliente.Direccion = TxtDir.Text;
-                cliente.Telefono = TxtTel.Text;
-                cliente.Apellidos = TxtApellidos.Text;
-                cliente.Id = Form1.Clientes.Count + "";
-                Form1.Clientes.Add(cliente);
+                var item = new Empleado();
+                item.Nombre = TxtNombre.Text;
+                item.Email = TxtEmail.Text;
+                item.Posicion = TxtPos.Text;
+                item.Telefono = TxtTel.Text;
+                item.Apellidos = TxtApellidos.Text;
+                item.Id = Form1.Empleados.Count + "";
                 if (Form1.AlertDialog("Desea Agregar mas?"))
                 {
                     TxtNombre.Text = "";
                     TxtEmail.Text = "";
-                    TxtDir.Text = "";
+                    TxtPos.Text = "";
                     TxtTel.Text = "";
                     TxtApellidos.Text = "";
                     DtgDatos.DataSource = null;
-                    DtgDatos.DataSource = Form1.Clientes;
+                    DtgDatos.DataSource = Form1.Empleados;
                 }
                 else
                 {
@@ -84,7 +75,6 @@ namespace Caso_Desarrollo_Hotel.Forms
                     frm.ShowDialog();
                     Close();
                 }
-
             }
             catch (Exception err)
             {
@@ -92,23 +82,31 @@ namespace Caso_Desarrollo_Hotel.Forms
             }
         }
 
-        private void FrmClientes_Load(object sender, EventArgs e)
+        private void FrmEmpleados_Load(object sender, EventArgs e)
         {
-            DtgDatos.DataSource = Form1.Clientes;
+            DtgDatos.DataSource = Form1.Empleados;
 
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
-            if (DtgDatos.SelectedCells.Count>0)
+            if (DtgDatos.SelectedCells.Count > 0)
             {
                 if (Form1.AlertDialog($"Desea Eliminar?"))
                 {
-                    Form1.Clientes.RemoveAll(v => v.Id == DtgDatos.Rows[DtgDatos.SelectedCells[0].RowIndex].Cells[0].Value.ToString());
+                    Form1.Empleados.RemoveAll(v => v.Id == DtgDatos.Rows[DtgDatos.SelectedCells[0].RowIndex].Cells[0].Value.ToString());
                 }
                 DtgDatos.DataSource = null;
-                DtgDatos.DataSource = Form1.Clientes;
+                DtgDatos.DataSource = Form1.Empleados;
             }
+        }
+
+        private void BtnReturn_Click(object sender, EventArgs e)
+        {
+            var frm = new Main();
+            Hide();
+            frm.ShowDialog();
+            Close();
         }
     }
 }

@@ -28,30 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DtgDatos = new System.Windows.Forms.DataGridView();
             this.BtnReturn = new MaterialSkin.Controls.MaterialButton();
             this.TxtHabitacion = new MaterialSkin.Controls.MaterialTextBox2();
             this.TxtCliente = new MaterialSkin.Controls.MaterialTextBox2();
-            this.materialComboBox1 = new MaterialSkin.Controls.MaterialComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.DtpInicio = new System.Windows.Forms.DateTimePicker();
+            this.DtpFinal = new System.Windows.Forms.DateTimePicker();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.BtnDelete = new MaterialSkin.Controls.MaterialButton();
             this.BtnEdit = new MaterialSkin.Controls.MaterialButton();
             this.BtnAdd = new MaterialSkin.Controls.MaterialButton();
             this.BtnSearch = new MaterialSkin.Controls.MaterialButton();
+            this.ChbReserved = new MaterialSkin.Controls.MaterialCheckbox();
             ((System.ComponentModel.ISupportInitialize)(this.DtgDatos)).BeginInit();
             this.SuspendLayout();
             // 
             // DtgDatos
             // 
             this.DtgDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DtgDatos.Location = new System.Drawing.Point(344, 86);
+            this.DtgDatos.Location = new System.Drawing.Point(258, 70);
+            this.DtgDatos.Margin = new System.Windows.Forms.Padding(2);
             this.DtgDatos.Name = "DtgDatos";
             this.DtgDatos.RowHeadersWidth = 51;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkGray;
+            this.DtgDatos.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DtgDatos.RowTemplate.Height = 24;
-            this.DtgDatos.Size = new System.Drawing.Size(666, 426);
+            this.DtgDatos.Size = new System.Drawing.Size(663, 346);
             this.DtgDatos.TabIndex = 21;
             // 
             // BtnReturn
@@ -61,8 +65,8 @@
             this.BtnReturn.Depth = 0;
             this.BtnReturn.HighEmphasis = true;
             this.BtnReturn.Icon = global::Caso_Desarrollo_Hotel.Properties.Resources.arrow_left;
-            this.BtnReturn.Location = new System.Drawing.Point(17, 476);
-            this.BtnReturn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.BtnReturn.Location = new System.Drawing.Point(13, 387);
+            this.BtnReturn.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.BtnReturn.MouseState = MaterialSkin.MouseState.HOVER;
             this.BtnReturn.Name = "BtnReturn";
             this.BtnReturn.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -84,7 +88,8 @@
             this.TxtHabitacion.HideSelection = true;
             this.TxtHabitacion.Hint = "Habitacion id";
             this.TxtHabitacion.LeadingIcon = null;
-            this.TxtHabitacion.Location = new System.Drawing.Point(16, 143);
+            this.TxtHabitacion.Location = new System.Drawing.Point(12, 116);
+            this.TxtHabitacion.Margin = new System.Windows.Forms.Padding(2);
             this.TxtHabitacion.MaxLength = 32767;
             this.TxtHabitacion.MouseState = MaterialSkin.MouseState.OUT;
             this.TxtHabitacion.Name = "TxtHabitacion";
@@ -96,7 +101,7 @@
             this.TxtHabitacion.SelectionLength = 0;
             this.TxtHabitacion.SelectionStart = 0;
             this.TxtHabitacion.ShortcutsEnabled = true;
-            this.TxtHabitacion.Size = new System.Drawing.Size(250, 48);
+            this.TxtHabitacion.Size = new System.Drawing.Size(188, 48);
             this.TxtHabitacion.TabIndex = 12;
             this.TxtHabitacion.TabStop = false;
             this.TxtHabitacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -113,7 +118,8 @@
             this.TxtCliente.HideSelection = true;
             this.TxtCliente.Hint = "Cliente id";
             this.TxtCliente.LeadingIcon = null;
-            this.TxtCliente.Location = new System.Drawing.Point(16, 89);
+            this.TxtCliente.Location = new System.Drawing.Point(12, 72);
+            this.TxtCliente.Margin = new System.Windows.Forms.Padding(2);
             this.TxtCliente.MaxLength = 32767;
             this.TxtCliente.MouseState = MaterialSkin.MouseState.OUT;
             this.TxtCliente.Name = "TxtCliente";
@@ -125,60 +131,41 @@
             this.TxtCliente.SelectionLength = 0;
             this.TxtCliente.SelectionStart = 0;
             this.TxtCliente.ShortcutsEnabled = true;
-            this.TxtCliente.Size = new System.Drawing.Size(250, 48);
+            this.TxtCliente.Size = new System.Drawing.Size(188, 48);
             this.TxtCliente.TabIndex = 11;
             this.TxtCliente.TabStop = false;
             this.TxtCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.TxtCliente.TrailingIcon = null;
             this.TxtCliente.UseSystemPasswordChar = false;
             // 
-            // materialComboBox1
+            // DtpInicio
             // 
-            this.materialComboBox1.AutoResize = false;
-            this.materialComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialComboBox1.Depth = 0;
-            this.materialComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.materialComboBox1.DropDownHeight = 174;
-            this.materialComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.materialComboBox1.DropDownWidth = 121;
-            this.materialComboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.materialComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialComboBox1.FormattingEnabled = true;
-            this.materialComboBox1.IntegralHeight = false;
-            this.materialComboBox1.ItemHeight = 43;
-            this.materialComboBox1.Location = new System.Drawing.Point(16, 197);
-            this.materialComboBox1.MaxDropDownItems = 4;
-            this.materialComboBox1.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialComboBox1.Name = "materialComboBox1";
-            this.materialComboBox1.Size = new System.Drawing.Size(250, 49);
-            this.materialComboBox1.StartIndex = 0;
-            this.materialComboBox1.TabIndex = 22;
+            this.DtpInicio.CalendarMonthBackground = System.Drawing.Color.Transparent;
+            this.DtpInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DtpInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DtpInicio.Location = new System.Drawing.Point(103, 205);
+            this.DtpInicio.Margin = new System.Windows.Forms.Padding(2);
+            this.DtpInicio.Name = "DtpInicio";
+            this.DtpInicio.Size = new System.Drawing.Size(103, 23);
+            this.DtpInicio.TabIndex = 23;
             // 
-            // dateTimePicker1
+            // DtpFinal
             // 
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.Transparent;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(130, 252);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(136, 27);
-            this.dateTimePicker1.TabIndex = 23;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(130, 285);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(136, 27);
-            this.dateTimePicker2.TabIndex = 24;
+            this.DtpFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DtpFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DtpFinal.Location = new System.Drawing.Point(103, 238);
+            this.DtpFinal.Margin = new System.Windows.Forms.Padding(2);
+            this.DtpFinal.Name = "DtpFinal";
+            this.DtpFinal.Size = new System.Drawing.Size(103, 23);
+            this.DtpFinal.TabIndex = 24;
             // 
             // materialLabel1
             // 
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(17, 260);
+            this.materialLabel1.Location = new System.Drawing.Point(13, 205);
+            this.materialLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(86, 19);
@@ -190,7 +177,8 @@
             this.materialLabel2.AutoSize = true;
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel2.Location = new System.Drawing.Point(17, 293);
+            this.materialLabel2.Location = new System.Drawing.Point(13, 238);
+            this.materialLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(83, 19);
@@ -205,16 +193,17 @@
             this.BtnDelete.Depth = 0;
             this.BtnDelete.HighEmphasis = true;
             this.BtnDelete.Icon = global::Caso_Desarrollo_Hotel.Properties.Resources.trash;
-            this.BtnDelete.Location = new System.Drawing.Point(280, 188);
-            this.BtnDelete.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.BtnDelete.Location = new System.Drawing.Point(210, 153);
+            this.BtnDelete.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.BtnDelete.MouseState = MaterialSkin.MouseState.HOVER;
             this.BtnDelete.Name = "BtnDelete";
             this.BtnDelete.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.BtnDelete.Size = new System.Drawing.Size(57, 45);
+            this.BtnDelete.Size = new System.Drawing.Size(43, 37);
             this.BtnDelete.TabIndex = 30;
             this.BtnDelete.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.BtnDelete.UseAccentColor = false;
             this.BtnDelete.UseVisualStyleBackColor = true;
+            this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // BtnEdit
             // 
@@ -224,12 +213,12 @@
             this.BtnEdit.Depth = 0;
             this.BtnEdit.HighEmphasis = true;
             this.BtnEdit.Icon = global::Caso_Desarrollo_Hotel.Properties.Resources.edit;
-            this.BtnEdit.Location = new System.Drawing.Point(280, 140);
-            this.BtnEdit.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.BtnEdit.Location = new System.Drawing.Point(210, 114);
+            this.BtnEdit.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.BtnEdit.MouseState = MaterialSkin.MouseState.HOVER;
             this.BtnEdit.Name = "BtnEdit";
             this.BtnEdit.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.BtnEdit.Size = new System.Drawing.Size(57, 45);
+            this.BtnEdit.Size = new System.Drawing.Size(43, 37);
             this.BtnEdit.TabIndex = 29;
             this.BtnEdit.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.BtnEdit.UseAccentColor = false;
@@ -243,16 +232,17 @@
             this.BtnAdd.Depth = 0;
             this.BtnAdd.HighEmphasis = true;
             this.BtnAdd.Icon = global::Caso_Desarrollo_Hotel.Properties.Resources.check;
-            this.BtnAdd.Location = new System.Drawing.Point(280, 89);
-            this.BtnAdd.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.BtnAdd.Location = new System.Drawing.Point(210, 72);
+            this.BtnAdd.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.BtnAdd.MouseState = MaterialSkin.MouseState.HOVER;
             this.BtnAdd.Name = "BtnAdd";
             this.BtnAdd.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.BtnAdd.Size = new System.Drawing.Size(57, 45);
+            this.BtnAdd.Size = new System.Drawing.Size(43, 37);
             this.BtnAdd.TabIndex = 28;
             this.BtnAdd.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.BtnAdd.UseAccentColor = false;
             this.BtnAdd.UseVisualStyleBackColor = true;
+            this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // BtnSearch
             // 
@@ -262,37 +252,58 @@
             this.BtnSearch.Depth = 0;
             this.BtnSearch.HighEmphasis = true;
             this.BtnSearch.Icon = global::Caso_Desarrollo_Hotel.Properties.Resources.search;
-            this.BtnSearch.Location = new System.Drawing.Point(280, 236);
-            this.BtnSearch.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.BtnSearch.Location = new System.Drawing.Point(210, 192);
+            this.BtnSearch.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.BtnSearch.MouseState = MaterialSkin.MouseState.HOVER;
             this.BtnSearch.Name = "BtnSearch";
             this.BtnSearch.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.BtnSearch.Size = new System.Drawing.Size(57, 45);
+            this.BtnSearch.Size = new System.Drawing.Size(43, 37);
             this.BtnSearch.TabIndex = 27;
             this.BtnSearch.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.BtnSearch.UseAccentColor = false;
             this.BtnSearch.UseVisualStyleBackColor = true;
             // 
+            // ChbReserved
+            // 
+            this.ChbReserved.AutoSize = true;
+            this.ChbReserved.Checked = true;
+            this.ChbReserved.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ChbReserved.Depth = 0;
+            this.ChbReserved.Location = new System.Drawing.Point(12, 166);
+            this.ChbReserved.Margin = new System.Windows.Forms.Padding(0);
+            this.ChbReserved.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.ChbReserved.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ChbReserved.Name = "ChbReserved";
+            this.ChbReserved.ReadOnly = false;
+            this.ChbReserved.Ripple = true;
+            this.ChbReserved.Size = new System.Drawing.Size(109, 37);
+            this.ChbReserved.TabIndex = 31;
+            this.ChbReserved.Text = "Reservado";
+            this.ChbReserved.UseVisualStyleBackColor = true;
+            // 
             // FrmReservas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1020, 532);
+            this.ClientSize = new System.Drawing.Size(925, 432);
+            this.Controls.Add(this.ChbReserved);
             this.Controls.Add(this.BtnDelete);
             this.Controls.Add(this.BtnEdit);
             this.Controls.Add(this.BtnAdd);
             this.Controls.Add(this.BtnSearch);
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.materialLabel1);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.materialComboBox1);
+            this.Controls.Add(this.DtpFinal);
+            this.Controls.Add(this.DtpInicio);
             this.Controls.Add(this.DtgDatos);
             this.Controls.Add(this.BtnReturn);
             this.Controls.Add(this.TxtHabitacion);
             this.Controls.Add(this.TxtCliente);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmReservas";
+            this.Padding = new System.Windows.Forms.Padding(2, 52, 2, 2);
             this.Text = "FrmReservas";
+            this.Load += new System.EventHandler(this.FrmReservas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DtgDatos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -305,14 +316,14 @@
         private MaterialSkin.Controls.MaterialButton BtnReturn;
         private MaterialSkin.Controls.MaterialTextBox2 TxtHabitacion;
         private MaterialSkin.Controls.MaterialTextBox2 TxtCliente;
-        private MaterialSkin.Controls.MaterialComboBox materialComboBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker DtpInicio;
+        private System.Windows.Forms.DateTimePicker DtpFinal;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialButton BtnDelete;
         private MaterialSkin.Controls.MaterialButton BtnEdit;
         private MaterialSkin.Controls.MaterialButton BtnAdd;
         private MaterialSkin.Controls.MaterialButton BtnSearch;
+        private MaterialSkin.Controls.MaterialCheckbox ChbReserved;
     }
 }

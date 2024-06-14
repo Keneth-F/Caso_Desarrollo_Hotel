@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DtgDatos = new System.Windows.Forms.DataGridView();
             this.TxtMonto = new MaterialSkin.Controls.MaterialTextBox2();
             this.TxtEmpleado = new MaterialSkin.Controls.MaterialTextBox2();
@@ -44,11 +45,14 @@
             // DtgDatos
             // 
             this.DtgDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DtgDatos.Location = new System.Drawing.Point(344, 77);
+            this.DtgDatos.Location = new System.Drawing.Point(258, 63);
+            this.DtgDatos.Margin = new System.Windows.Forms.Padding(2);
             this.DtgDatos.Name = "DtgDatos";
             this.DtgDatos.RowHeadersWidth = 51;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkGray;
+            this.DtgDatos.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DtgDatos.RowTemplate.Height = 24;
-            this.DtgDatos.Size = new System.Drawing.Size(666, 426);
+            this.DtgDatos.Size = new System.Drawing.Size(669, 346);
             this.DtgDatos.TabIndex = 21;
             // 
             // TxtMonto
@@ -61,7 +65,8 @@
             this.TxtMonto.HideSelection = true;
             this.TxtMonto.Hint = "Monto Total";
             this.TxtMonto.LeadingIcon = null;
-            this.TxtMonto.Location = new System.Drawing.Point(15, 242);
+            this.TxtMonto.Location = new System.Drawing.Point(11, 197);
+            this.TxtMonto.Margin = new System.Windows.Forms.Padding(2);
             this.TxtMonto.MaxLength = 32767;
             this.TxtMonto.MouseState = MaterialSkin.MouseState.OUT;
             this.TxtMonto.Name = "TxtMonto";
@@ -73,7 +78,7 @@
             this.TxtMonto.SelectionLength = 0;
             this.TxtMonto.SelectionStart = 0;
             this.TxtMonto.ShortcutsEnabled = true;
-            this.TxtMonto.Size = new System.Drawing.Size(250, 48);
+            this.TxtMonto.Size = new System.Drawing.Size(188, 48);
             this.TxtMonto.TabIndex = 14;
             this.TxtMonto.TabStop = false;
             this.TxtMonto.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -90,7 +95,8 @@
             this.TxtEmpleado.HideSelection = true;
             this.TxtEmpleado.Hint = "Empleado";
             this.TxtEmpleado.LeadingIcon = null;
-            this.TxtEmpleado.Location = new System.Drawing.Point(15, 188);
+            this.TxtEmpleado.Location = new System.Drawing.Point(11, 153);
+            this.TxtEmpleado.Margin = new System.Windows.Forms.Padding(2);
             this.TxtEmpleado.MaxLength = 32767;
             this.TxtEmpleado.MouseState = MaterialSkin.MouseState.OUT;
             this.TxtEmpleado.Name = "TxtEmpleado";
@@ -102,7 +108,7 @@
             this.TxtEmpleado.SelectionLength = 0;
             this.TxtEmpleado.SelectionStart = 0;
             this.TxtEmpleado.ShortcutsEnabled = true;
-            this.TxtEmpleado.Size = new System.Drawing.Size(250, 48);
+            this.TxtEmpleado.Size = new System.Drawing.Size(188, 48);
             this.TxtEmpleado.TabIndex = 13;
             this.TxtEmpleado.TabStop = false;
             this.TxtEmpleado.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -119,7 +125,8 @@
             this.TxtCliente.HideSelection = true;
             this.TxtCliente.Hint = "Id Cliente";
             this.TxtCliente.LeadingIcon = null;
-            this.TxtCliente.Location = new System.Drawing.Point(15, 134);
+            this.TxtCliente.Location = new System.Drawing.Point(11, 109);
+            this.TxtCliente.Margin = new System.Windows.Forms.Padding(2);
             this.TxtCliente.MaxLength = 32767;
             this.TxtCliente.MouseState = MaterialSkin.MouseState.OUT;
             this.TxtCliente.Name = "TxtCliente";
@@ -131,7 +138,7 @@
             this.TxtCliente.SelectionLength = 0;
             this.TxtCliente.SelectionStart = 0;
             this.TxtCliente.ShortcutsEnabled = true;
-            this.TxtCliente.Size = new System.Drawing.Size(250, 48);
+            this.TxtCliente.Size = new System.Drawing.Size(188, 48);
             this.TxtCliente.TabIndex = 12;
             this.TxtCliente.TabStop = false;
             this.TxtCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -148,7 +155,8 @@
             this.TxtReserva.HideSelection = true;
             this.TxtReserva.Hint = "Id Reserva";
             this.TxtReserva.LeadingIcon = null;
-            this.TxtReserva.Location = new System.Drawing.Point(15, 80);
+            this.TxtReserva.Location = new System.Drawing.Point(11, 65);
+            this.TxtReserva.Margin = new System.Windows.Forms.Padding(2);
             this.TxtReserva.MaxLength = 32767;
             this.TxtReserva.MouseState = MaterialSkin.MouseState.OUT;
             this.TxtReserva.Name = "TxtReserva";
@@ -160,7 +168,7 @@
             this.TxtReserva.SelectionLength = 0;
             this.TxtReserva.SelectionStart = 0;
             this.TxtReserva.ShortcutsEnabled = true;
-            this.TxtReserva.Size = new System.Drawing.Size(250, 48);
+            this.TxtReserva.Size = new System.Drawing.Size(188, 48);
             this.TxtReserva.TabIndex = 11;
             this.TxtReserva.TabStop = false;
             this.TxtReserva.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -174,8 +182,8 @@
             this.BtnReturn.Depth = 0;
             this.BtnReturn.HighEmphasis = true;
             this.BtnReturn.Icon = global::Caso_Desarrollo_Hotel.Properties.Resources.arrow_left;
-            this.BtnReturn.Location = new System.Drawing.Point(16, 467);
-            this.BtnReturn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.BtnReturn.Location = new System.Drawing.Point(12, 379);
+            this.BtnReturn.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.BtnReturn.MouseState = MaterialSkin.MouseState.HOVER;
             this.BtnReturn.Name = "BtnReturn";
             this.BtnReturn.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -195,16 +203,17 @@
             this.materialButton1.Depth = 0;
             this.materialButton1.HighEmphasis = true;
             this.materialButton1.Icon = global::Caso_Desarrollo_Hotel.Properties.Resources.trash;
-            this.materialButton1.Location = new System.Drawing.Point(280, 179);
-            this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton1.Location = new System.Drawing.Point(210, 145);
+            this.materialButton1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton1.Name = "materialButton1";
             this.materialButton1.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton1.Size = new System.Drawing.Size(57, 45);
+            this.materialButton1.Size = new System.Drawing.Size(43, 37);
             this.materialButton1.TabIndex = 25;
             this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.materialButton1.UseAccentColor = false;
             this.materialButton1.UseVisualStyleBackColor = true;
+            this.materialButton1.Click += new System.EventHandler(this.materialButton1_Click);
             // 
             // materialButton2
             // 
@@ -214,12 +223,12 @@
             this.materialButton2.Depth = 0;
             this.materialButton2.HighEmphasis = true;
             this.materialButton2.Icon = global::Caso_Desarrollo_Hotel.Properties.Resources.edit;
-            this.materialButton2.Location = new System.Drawing.Point(280, 131);
-            this.materialButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton2.Location = new System.Drawing.Point(210, 106);
+            this.materialButton2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.materialButton2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton2.Name = "materialButton2";
             this.materialButton2.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton2.Size = new System.Drawing.Size(57, 45);
+            this.materialButton2.Size = new System.Drawing.Size(43, 37);
             this.materialButton2.TabIndex = 24;
             this.materialButton2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.materialButton2.UseAccentColor = false;
@@ -233,16 +242,17 @@
             this.materialButton3.Depth = 0;
             this.materialButton3.HighEmphasis = true;
             this.materialButton3.Icon = global::Caso_Desarrollo_Hotel.Properties.Resources.check;
-            this.materialButton3.Location = new System.Drawing.Point(280, 80);
-            this.materialButton3.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton3.Location = new System.Drawing.Point(210, 65);
+            this.materialButton3.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.materialButton3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton3.Name = "materialButton3";
             this.materialButton3.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton3.Size = new System.Drawing.Size(57, 45);
+            this.materialButton3.Size = new System.Drawing.Size(43, 37);
             this.materialButton3.TabIndex = 23;
             this.materialButton3.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.materialButton3.UseAccentColor = false;
             this.materialButton3.UseVisualStyleBackColor = true;
+            this.materialButton3.Click += new System.EventHandler(this.materialButton3_Click);
             // 
             // materialButton4
             // 
@@ -252,12 +262,12 @@
             this.materialButton4.Depth = 0;
             this.materialButton4.HighEmphasis = true;
             this.materialButton4.Icon = global::Caso_Desarrollo_Hotel.Properties.Resources.search;
-            this.materialButton4.Location = new System.Drawing.Point(280, 227);
-            this.materialButton4.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton4.Location = new System.Drawing.Point(210, 184);
+            this.materialButton4.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.materialButton4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton4.Name = "materialButton4";
             this.materialButton4.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton4.Size = new System.Drawing.Size(57, 45);
+            this.materialButton4.Size = new System.Drawing.Size(43, 37);
             this.materialButton4.TabIndex = 22;
             this.materialButton4.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.materialButton4.UseAccentColor = false;
@@ -265,9 +275,9 @@
             // 
             // FrmFacturas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1016, 520);
+            this.ClientSize = new System.Drawing.Size(931, 422);
             this.Controls.Add(this.materialButton1);
             this.Controls.Add(this.materialButton2);
             this.Controls.Add(this.materialButton3);
@@ -278,8 +288,11 @@
             this.Controls.Add(this.TxtEmpleado);
             this.Controls.Add(this.TxtCliente);
             this.Controls.Add(this.TxtReserva);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmFacturas";
+            this.Padding = new System.Windows.Forms.Padding(2, 52, 2, 2);
             this.Text = "FrmFacturas";
+            this.Load += new System.EventHandler(this.FrmFacturas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DtgDatos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

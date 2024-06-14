@@ -50,6 +50,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Cliente.cs" />
+    <Compile Include="Clases\Empleado.cs" />
+    <Compile Include="Clases\Factura.cs" />
+    <Compile Include="Clases\Habitacion.cs" />
+    <Compile Include="Clases\Hotel.cs" />
+    <Compile Include="Clases\Pago.cs" />
+    <Compile Include="Clases\Reserva.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,6 +68,12 @@
     </Compile>
     <Compile Include="Forms\FrmClientes.Designer.cs">
       <DependentUpon>FrmClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmEmpleados.Designer.cs">
+      <DependentUpon>FrmEmpleados.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmFacturas.cs">
       <SubType>Form</SubType>
@@ -92,6 +105,12 @@
     <Compile Include="Forms\FrmReservas.Designer.cs">
       <DependentUpon>FrmReservas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -99,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmClientes.resx">
       <DependentUpon>FrmClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmEmpleados.resx">
+      <DependentUpon>FrmEmpleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmFacturas.resx">
       <DependentUpon>FrmFacturas.cs</DependentUpon>
@@ -114,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmReservas.resx">
       <DependentUpon>FrmReservas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

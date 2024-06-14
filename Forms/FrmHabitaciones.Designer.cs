@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DtgDatos = new System.Windows.Forms.DataGridView();
             this.BtnReturn = new MaterialSkin.Controls.MaterialButton();
             this.TxtPrecio = new MaterialSkin.Controls.MaterialTextBox2();
@@ -44,11 +45,14 @@
             // DtgDatos
             // 
             this.DtgDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DtgDatos.Location = new System.Drawing.Point(338, 86);
+            this.DtgDatos.Location = new System.Drawing.Point(254, 70);
+            this.DtgDatos.Margin = new System.Windows.Forms.Padding(2);
             this.DtgDatos.Name = "DtgDatos";
             this.DtgDatos.RowHeadersWidth = 51;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkGray;
+            this.DtgDatos.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DtgDatos.RowTemplate.Height = 24;
-            this.DtgDatos.Size = new System.Drawing.Size(666, 426);
+            this.DtgDatos.Size = new System.Drawing.Size(658, 346);
             this.DtgDatos.TabIndex = 31;
             // 
             // BtnReturn
@@ -58,8 +62,8 @@
             this.BtnReturn.Depth = 0;
             this.BtnReturn.HighEmphasis = true;
             this.BtnReturn.Icon = global::Caso_Desarrollo_Hotel.Properties.Resources.arrow_left;
-            this.BtnReturn.Location = new System.Drawing.Point(13, 476);
-            this.BtnReturn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.BtnReturn.Location = new System.Drawing.Point(10, 387);
+            this.BtnReturn.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.BtnReturn.MouseState = MaterialSkin.MouseState.HOVER;
             this.BtnReturn.Name = "BtnReturn";
             this.BtnReturn.NoAccentTextColor = System.Drawing.Color.Empty;
@@ -81,7 +85,8 @@
             this.TxtPrecio.HideSelection = true;
             this.TxtPrecio.Hint = "Precio Noche";
             this.TxtPrecio.LeadingIcon = null;
-            this.TxtPrecio.Location = new System.Drawing.Point(10, 197);
+            this.TxtPrecio.Location = new System.Drawing.Point(8, 160);
+            this.TxtPrecio.Margin = new System.Windows.Forms.Padding(2);
             this.TxtPrecio.MaxLength = 32767;
             this.TxtPrecio.MouseState = MaterialSkin.MouseState.OUT;
             this.TxtPrecio.Name = "TxtPrecio";
@@ -93,7 +98,7 @@
             this.TxtPrecio.SelectionLength = 0;
             this.TxtPrecio.SelectionStart = 0;
             this.TxtPrecio.ShortcutsEnabled = true;
-            this.TxtPrecio.Size = new System.Drawing.Size(250, 48);
+            this.TxtPrecio.Size = new System.Drawing.Size(188, 48);
             this.TxtPrecio.TabIndex = 25;
             this.TxtPrecio.TabStop = false;
             this.TxtPrecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -110,7 +115,8 @@
             this.TxtCapacidad.HideSelection = true;
             this.TxtCapacidad.Hint = "Capacidad";
             this.TxtCapacidad.LeadingIcon = null;
-            this.TxtCapacidad.Location = new System.Drawing.Point(10, 143);
+            this.TxtCapacidad.Location = new System.Drawing.Point(8, 116);
+            this.TxtCapacidad.Margin = new System.Windows.Forms.Padding(2);
             this.TxtCapacidad.MaxLength = 32767;
             this.TxtCapacidad.MouseState = MaterialSkin.MouseState.OUT;
             this.TxtCapacidad.Name = "TxtCapacidad";
@@ -122,7 +128,7 @@
             this.TxtCapacidad.SelectionLength = 0;
             this.TxtCapacidad.SelectionStart = 0;
             this.TxtCapacidad.ShortcutsEnabled = true;
-            this.TxtCapacidad.Size = new System.Drawing.Size(250, 48);
+            this.TxtCapacidad.Size = new System.Drawing.Size(188, 48);
             this.TxtCapacidad.TabIndex = 24;
             this.TxtCapacidad.TabStop = false;
             this.TxtCapacidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -139,7 +145,8 @@
             this.TxtNumero.HideSelection = true;
             this.TxtNumero.Hint = "Numero Habitacion";
             this.TxtNumero.LeadingIcon = null;
-            this.TxtNumero.Location = new System.Drawing.Point(12, 89);
+            this.TxtNumero.Location = new System.Drawing.Point(9, 72);
+            this.TxtNumero.Margin = new System.Windows.Forms.Padding(2);
             this.TxtNumero.MaxLength = 32767;
             this.TxtNumero.MouseState = MaterialSkin.MouseState.OUT;
             this.TxtNumero.Name = "TxtNumero";
@@ -151,7 +158,7 @@
             this.TxtNumero.SelectionLength = 0;
             this.TxtNumero.SelectionStart = 0;
             this.TxtNumero.ShortcutsEnabled = true;
-            this.TxtNumero.Size = new System.Drawing.Size(250, 48);
+            this.TxtNumero.Size = new System.Drawing.Size(188, 48);
             this.TxtNumero.TabIndex = 22;
             this.TxtNumero.TabStop = false;
             this.TxtNumero.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -172,11 +179,17 @@
             this.CbTipo.FormattingEnabled = true;
             this.CbTipo.IntegralHeight = false;
             this.CbTipo.ItemHeight = 43;
-            this.CbTipo.Location = new System.Drawing.Point(10, 251);
+            this.CbTipo.Items.AddRange(new object[] {
+            "individual",
+            "terraza",
+            "familiares",
+            "suites"});
+            this.CbTipo.Location = new System.Drawing.Point(8, 204);
+            this.CbTipo.Margin = new System.Windows.Forms.Padding(2);
             this.CbTipo.MaxDropDownItems = 4;
             this.CbTipo.MouseState = MaterialSkin.MouseState.OUT;
             this.CbTipo.Name = "CbTipo";
-            this.CbTipo.Size = new System.Drawing.Size(248, 49);
+            this.CbTipo.Size = new System.Drawing.Size(187, 49);
             this.CbTipo.StartIndex = 0;
             this.CbTipo.TabIndex = 32;
             // 
@@ -188,16 +201,17 @@
             this.BtnDelete.Depth = 0;
             this.BtnDelete.HighEmphasis = true;
             this.BtnDelete.Icon = global::Caso_Desarrollo_Hotel.Properties.Resources.trash;
-            this.BtnDelete.Location = new System.Drawing.Point(274, 188);
-            this.BtnDelete.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.BtnDelete.Location = new System.Drawing.Point(206, 153);
+            this.BtnDelete.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.BtnDelete.MouseState = MaterialSkin.MouseState.HOVER;
             this.BtnDelete.Name = "BtnDelete";
             this.BtnDelete.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.BtnDelete.Size = new System.Drawing.Size(57, 45);
+            this.BtnDelete.Size = new System.Drawing.Size(43, 37);
             this.BtnDelete.TabIndex = 36;
             this.BtnDelete.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.BtnDelete.UseAccentColor = false;
             this.BtnDelete.UseVisualStyleBackColor = true;
+            this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // BtnEdit
             // 
@@ -207,12 +221,12 @@
             this.BtnEdit.Depth = 0;
             this.BtnEdit.HighEmphasis = true;
             this.BtnEdit.Icon = global::Caso_Desarrollo_Hotel.Properties.Resources.edit;
-            this.BtnEdit.Location = new System.Drawing.Point(274, 140);
-            this.BtnEdit.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.BtnEdit.Location = new System.Drawing.Point(206, 114);
+            this.BtnEdit.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.BtnEdit.MouseState = MaterialSkin.MouseState.HOVER;
             this.BtnEdit.Name = "BtnEdit";
             this.BtnEdit.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.BtnEdit.Size = new System.Drawing.Size(57, 45);
+            this.BtnEdit.Size = new System.Drawing.Size(43, 37);
             this.BtnEdit.TabIndex = 35;
             this.BtnEdit.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.BtnEdit.UseAccentColor = false;
@@ -226,16 +240,17 @@
             this.BtnAdd.Depth = 0;
             this.BtnAdd.HighEmphasis = true;
             this.BtnAdd.Icon = global::Caso_Desarrollo_Hotel.Properties.Resources.check;
-            this.BtnAdd.Location = new System.Drawing.Point(274, 89);
-            this.BtnAdd.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.BtnAdd.Location = new System.Drawing.Point(206, 72);
+            this.BtnAdd.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.BtnAdd.MouseState = MaterialSkin.MouseState.HOVER;
             this.BtnAdd.Name = "BtnAdd";
             this.BtnAdd.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.BtnAdd.Size = new System.Drawing.Size(57, 45);
+            this.BtnAdd.Size = new System.Drawing.Size(43, 37);
             this.BtnAdd.TabIndex = 34;
             this.BtnAdd.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.BtnAdd.UseAccentColor = false;
             this.BtnAdd.UseVisualStyleBackColor = true;
+            this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // BtnSearch
             // 
@@ -245,12 +260,12 @@
             this.BtnSearch.Depth = 0;
             this.BtnSearch.HighEmphasis = true;
             this.BtnSearch.Icon = global::Caso_Desarrollo_Hotel.Properties.Resources.search;
-            this.BtnSearch.Location = new System.Drawing.Point(274, 236);
-            this.BtnSearch.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.BtnSearch.Location = new System.Drawing.Point(206, 192);
+            this.BtnSearch.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.BtnSearch.MouseState = MaterialSkin.MouseState.HOVER;
             this.BtnSearch.Name = "BtnSearch";
             this.BtnSearch.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.BtnSearch.Size = new System.Drawing.Size(57, 45);
+            this.BtnSearch.Size = new System.Drawing.Size(43, 37);
             this.BtnSearch.TabIndex = 33;
             this.BtnSearch.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.BtnSearch.UseAccentColor = false;
@@ -258,9 +273,9 @@
             // 
             // FrmHabitaciones
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1020, 529);
+            this.ClientSize = new System.Drawing.Size(920, 430);
             this.Controls.Add(this.BtnDelete);
             this.Controls.Add(this.BtnEdit);
             this.Controls.Add(this.BtnAdd);
@@ -271,8 +286,11 @@
             this.Controls.Add(this.TxtPrecio);
             this.Controls.Add(this.TxtCapacidad);
             this.Controls.Add(this.TxtNumero);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmHabitaciones";
+            this.Padding = new System.Windows.Forms.Padding(2, 52, 2, 2);
             this.Text = "FrmHabitaciones";
+            this.Load += new System.EventHandler(this.FrmHabitaciones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DtgDatos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

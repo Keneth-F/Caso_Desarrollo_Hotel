@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Caso_Desarrollo_Hotel.Forms;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,6 +15,8 @@ namespace Caso_Desarrollo_Hotel
         [STAThread]
         static void Main()
         {
+
+            //Cliente
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
